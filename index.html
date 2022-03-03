@@ -13,37 +13,39 @@
         <p>
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre" id="nombre"
-            title='Introduzca su nombre' autocomplete="given-name" required="required"
-            placeholder="Nombre"/>
+            title='Introduzca su nombre correctamente' autocomplete="given-name" required="required"
+            placeholder="Nombre" pattern="[A-ZÑ][ -Ñ]{0,}"/>
+            <!--El pattern es para que empiece por mayúscula(hay nombres muy extraños)-->
         </p>
         <p>
             <label for="apellido1">Primer apellido:</label>
-            <input type="text" name="apellido1" id="apellido1" 
-            title='Introduzca su primer apellido' autocomplete="family-name"
-            required="required" placeholder="Apellido"/>
+            <input type="text" name="apellido1" id="apellido1"
+            title='Introduzca su primer apellido correctamente' autocomplete="family-name"
+            required="required" placeholder="Apellido" pattern="[A-ZÑ][ -Ñ]{0,}"/>
         </p>
         <p>
             <label for="fechaNacimiento">Fecha de nacimiento:</label>
             <input type="date" name="fechaNacimiento" id="fechaNacimiento" 
-            title='Introduzca su fecha de nacimiento' autocomplete="on" required="required"/>
+            title='Introduzca su fecha de nacimiento correctamente' autocomplete="on" required="required"/>
         </p>
         <p>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" title='Introduzca su e-mail'
+            <input type="email" name="email" id="email" title='Introduzca su e-mail correctamente'
             autocomplete="email" required="required" placeholder="email@mail.com"/>
             <!--placeholder="0123456789@uma.es" pattern="[0-9]{10}-@uma.es"-->
         </p>
         <p>
             <label for="telefono">Telef&oacute;no:</label>
             <input type="tel" name="telefono" id="telefono"
-            title='Introduzca su telef&oacute;no' autocomplete="tel" required="required"
-            placeholder="+(Código de área) Número"/>
+            title='Introduzca su telef&oacute;no con el prefijo de su país' autocomplete="tel" required="required"
+            placeholder="(Código de área) Número" pattern="[+]{1}[0-9-]{1,} [0-9]{1,}"/>
         </p>
         <p>
             <label for="contraseña">Contraseña:</label>
-            <input type="password" name="contraseña" id="contraseña"
-            title='Introduzca su contraseña' autocomplete="new-password" required="required"
-            placeholder="Contraseña"/>
+            <input type="password" name="contraseña" id="contraseña" minlength="5"
+            autocomplete="new-password" required="required"
+            placeholder="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Introduzca una contraseña válida. Debe contener al menos 8 caracteres, un número, una letra mayúscula y otra minúscula"/>
         </p>
         <p>
             <label for="color">Color favorito:</label>
