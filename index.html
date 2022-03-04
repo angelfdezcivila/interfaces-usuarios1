@@ -12,8 +12,8 @@
     <form action="FormularioServletProcesa" method="post">
         <p>
             <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre"
-            title='Introduzca su nombre correctamente' autocomplete="given-name" required="required"
+            <input type="text" name="nombre" id="nombre" autofocus
+            title='Introduzca su nombre correctamente' autocomplete="given-name" required
             placeholder="Nombre" pattern="[A-ZÑ][ -Ñ]{0,}"/>
             <!--El pattern es para que empiece por mayúscula(hay nombres muy extraños)-->
         </p>
@@ -26,7 +26,7 @@
         <p>
             <label for="fechaNacimiento">Fecha de nacimiento:</label>
             <input type="date" name="fechaNacimiento" id="fechaNacimiento" 
-            title='Introduzca su fecha de nacimiento correctamente' autocomplete="on" required="required"/>
+            title='Introduzca su fecha de nacimiento correctamente' autocomplete="on" required/>
         </p>
         <p>
             <label for="email">Email:</label>
@@ -37,7 +37,7 @@
         <p>
             <label for="telefono">Telef&oacute;no:</label>
             <input type="tel" name="telefono" id="telefono"
-            title='Introduzca su telef&oacute;no con el prefijo de su país' autocomplete="tel" required="required"
+            title='Introduzca su telef&oacute;no con el prefijo de su país' autocomplete="tel" required
             placeholder="(Código de área) Número" pattern="[+]{1}[0-9-]{1,} [0-9]{1,}"/>
         </p>
         <p>
@@ -50,7 +50,7 @@
         <p>
             <label for="color">Color favorito:</label>
             <input type="color" name="color" id="color"
-            title='Introduzca su color favorito' autocomplete="on" required="required"/>
+            title='Introduzca su color favorito' autocomplete="on" required/>
         </p>
         <input type="submit" value="Enviar"/>
         <input type="reset" value="Limpiar">
